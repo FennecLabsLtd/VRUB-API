@@ -11,6 +11,8 @@
 |
  */
 
+Route::get('/', 'MiscController@root');
+
 Route::group(['prefix' => 'ticket', 'middleware' => ['auth.api']], function () {
     Route::get('info', 'SteamTicketController@info');
     Route::get('request', 'SteamTicketController@request');
